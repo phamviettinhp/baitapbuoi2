@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Đa Cấp</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-image: url(https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960);
+            background-size:auto;
+            background-position:top;
+            box-sizing: border-box;
+            font-family: tahoma;
+        }
+        .menu-bar{
+            background: #edeef1;
+            text-align: center;
+        }
+        .root{
+            display: inline-flex;
+        }
+        ul.root>li{
+            list-style: none;
+            position: relative;
+            width: 150px;
+            margin: 10px;
+        }
+        ul.root>li>a{
+            text-decoration: none;
+            color: #768591;
+            padding: 0px 15px 0 15px;
+            line-height: 40px;
+            display: block;
+        }
+        li.active>a, ul.root>li>a:hover{
+            background-color: orange;
+            color: red;
+            transition: ease-in 0.30s;
+            -moz-transition: ease-in 0.30s;
+            -webkit-transition: ease-in 0.30s;
+        }
+        ul.submenu{
+            width: 150px;
+            background-color: #edeef1;
+            min-height: 150px;
+            display: none;
+            position: absolute;
+        }
+        ul.submenu>li{
+            list-style: none;
+        }
+        ul.submenu>li>a{
+            color: #768591;
+            text-decoration: none;
+            display: block;
+            border-top: 1px solid #ccc;
+            line-height: 40px;
+        }
+        ul.submenu>li>a:hover{
+            background-color: orange;
+            color: red;
+            transition: ease-in 0.30s;
+            -moz-transition: ease-in 0.30s;
+            -webkit-transition: ease-in 0.30s;
+        }
+        ul.root > li:hover ul.submenu{
+            display: block;
+            transition: ease-out 0.30s;
+            -moz-transition: ease-out 0.30s;
+            -webkit-transition: ease-out 0.30s;            
+        }
+        ul.subsubmenu{
+            width: 150px;
+            background-color: #edeef1;
+            min-height: 150px;
+            display: none;
+            position: absolute; 
+            margin-top: -41px;
+            margin-left: 150px;
+        }
+        ul.subsubmenu>li{
+            list-style: none;
+        }
+        ul.subsubmenu>li>a{
+            color: #768591;
+            text-decoration: none;
+            display: block;
+            border-top: 1px solid #ccc;
+            line-height: 40px;
+            text-indent: 10px;
+        }
+        ul.submenu > li:hover ul.subsubmenu{
+            display: block;
+            transition: ease-out 0.30s;
+            -moz-transition: ease-out 0.30s;
+            -webkit-transition: ease-out 0.30s;  
+        }
+        ul.subsubmenu>li>a:hover{
+            background-color: orange;
+            color: red;
+            transition: ease-in 0.30s;
+            -moz-transition: ease-in 0.30s;
+            -webkit-transition: ease-in 0.30s;            
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <ul class="root">
+            <li class="active"><a href="" style="color: red">TRANG CHỦ</a></li>
+            <li><a href="">ĐIỆN THOẠI</a>
+                <ul class="submenu">
+                    <li><a href="">SAMSUNG</a>
+                        <ul class="subsubmenu">
+                            <li><a href="">Galaxy Win</a></li>
+                            <li><a href="">Galaxy Note 1</a></li>
+                            <li><a href="">Galaxy Note 2</a></li>
+                            <li><a href="">Galaxy Trend</a></li>
+                            <li><a href="">Galaxy V</a></li>       
+                        </ul>
+                    </li>
+                    <li><a href="#">ASUS</a></li>
+                    <li><a href="#">LENOVO</a></li>
+                    <li><a href="#">APPLE</a></li>
+                    <li><a href="#">OPPO</a></li>
+                </ul>
+                </li>
+             <li><a href="#">TABLET</a></li>
+             <li><a href="#">LAPTOP</a></li>
+             <li><a href="#">APP/GAME</a></li>
+             <li><a href="#">TIN TỨC</a></li>
+             <li><a href="#">KHUYẾN MÃI</a></li>
+        </ul>
+    </div>
+</body>
+</html>
